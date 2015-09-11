@@ -1,0 +1,13 @@
+li a {
+    color: blue;
+    font-size:1.5em;
+}
+li {
+	width:30%;
+    padding: 10px;
+    float: left;
+}
+h1{
+
+	margin-bottom:30px;
+}
