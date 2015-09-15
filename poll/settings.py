@@ -22,8 +22,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = '9fuq+m@6!h!!xzdg)#pvhv8b(3w^d3aob_xgi&mhcn9e-v$s(*'
 
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+
 
 ALLOWED_HOSTS = []
 
@@ -72,16 +71,8 @@ TEMPLATES = [
 WSGI_APPLICATION = 'poll.wsgi.application'
 
 
-# Database
-# https://docs.djangoproject.com/en/1.8/ref/settings/#databases
-
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'poll',
-        'USER': 'postgres',
-    }
-}
+import dj_database_url
+DATABASES['default'] =  dj_database_url.config()
 
 
 # Internationalization
